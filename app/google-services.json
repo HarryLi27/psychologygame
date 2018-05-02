@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "50441527853",
+    "firebase_url": "https://game-e2725.firebaseio.com",
+    "project_id": "game-e2725",
+    "storage_bucket": "game-e2725.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:50441527853:android:6eddd2221c04b4fe",
+        "android_client_info": {
+          "package_name": "com.example.yl34.psychologygame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "50441527853-vp3c5pnl7327p5cqgek6gla7qjcbhupf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5LwOsb70Nn5_x5N0-8n2-QGi_iH53KM8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

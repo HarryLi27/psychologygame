@@ -7,6 +7,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class MainActivity extends AppCompatActivity {
@@ -480,6 +488,10 @@ public class MainActivity extends AppCompatActivity {
                 scorecount.setVisibility(View.VISIBLE);
                 String scorestring = "your score" + score.get();
                 scorecount.setText(scorestring);
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("score");
+
+                myRef.setValue(score.get());
             }
         });
         red10.setOnClickListener(new View.OnClickListener() {
@@ -491,6 +503,12 @@ public class MainActivity extends AppCompatActivity {
                 red10.setVisibility(View.INVISIBLE);
                 one.setVisibility(View.INVISIBLE);
                 scorecount.setVisibility(View.VISIBLE);
+                String scorestring = "Your score" + score.get();
+                scorecount.setText(scorestring);
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("score");
+
+                myRef.setValue(score.get());
             }
         });
         black10.setOnClickListener(new View.OnClickListener() {
@@ -504,8 +522,13 @@ public class MainActivity extends AppCompatActivity {
                 scorecount.setVisibility(View.VISIBLE);
                 String scorestring = "Your score" + score.get();
                 scorecount.setText(scorestring);
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("score");
+
+                myRef.setValue(score.get());
             }
         });
+
 
     }
 }
