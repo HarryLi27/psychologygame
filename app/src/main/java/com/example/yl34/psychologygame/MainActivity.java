@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView five = findViewById(R.id.five);
         final TextView six = findViewById(R.id.six);
         final TextView scorecount = findViewById(R.id.score);
+        final Button restart = findViewById(R.id.restart);
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -492,6 +493,8 @@ public class MainActivity extends AppCompatActivity {
                 DatabaseReference myRef = database.getReference("score");
 
                 myRef.setValue(score.get());
+                score.set(0);
+                restart.setVisibility(View.VISIBLE);
             }
         });
         red10.setOnClickListener(new View.OnClickListener() {
@@ -509,6 +512,8 @@ public class MainActivity extends AppCompatActivity {
                 DatabaseReference myRef = database.getReference("score");
 
                 myRef.setValue(score.get());
+                score.set(0);
+                restart.setVisibility(View.VISIBLE);
             }
         });
         black10.setOnClickListener(new View.OnClickListener() {
@@ -526,6 +531,21 @@ public class MainActivity extends AppCompatActivity {
                 DatabaseReference myRef = database.getReference("score");
 
                 myRef.setValue(score.get());
+                score.set(0);
+                restart.setVisibility(View.VISIBLE);
+            }
+        });
+        restart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                Log.d(TAG, "the game begin10" + score.get());
+                blue1.setVisibility(View.VISIBLE);
+                black1.setVisibility(View.VISIBLE);
+                red1.setVisibility(View.VISIBLE);
+                one.setVisibility(View.VISIBLE);
+                scorecount.setVisibility(View.INVISIBLE);
+                restart.setVisibility(View.INVISIBLE);
+
             }
         });
 
