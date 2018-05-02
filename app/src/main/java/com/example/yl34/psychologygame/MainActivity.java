@@ -502,7 +502,7 @@ public class MainActivity extends AppCompatActivity {
                 red10.setVisibility(View.INVISIBLE);
                 one.setVisibility(View.INVISIBLE);
                 scorecount.setVisibility(View.VISIBLE);
-                String scorestring = "your score" + score.get();
+                String scorestring = "Your score" + score.get();
                 scorecount.setText(scorestring);
             }
         });
